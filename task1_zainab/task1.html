@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Equation Solver</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 450px;
+            max-width: 95%;
+        }
+        .header {
+            background: #007bff;
+            padding: 20px 40px;
+            color: white;
+            text-align: center;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .form-container {
+            padding: 40px;
+        }
+        .form-container input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-container button:hover {
+            background: #218838;
+        }
+        .result-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        .result-container #result {
+            word-wrap: break-word;
+            font-family: monospace;
+        }
+    </style>
+    <script src="task.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Circle Equation Solver</h2>
+        </div>
+        <div class="form-container">
+            <input type="number" id="center-x" placeholder="Center X Coordinate (h)">
+            <input type="number" id="center-y" placeholder="Center Y Coordinate (k)">
+            <input type="number" id="radius" placeholder="Radius (r)">
+            <button onclick="solveCircle()">Calculate Equation</button>
+        </div>
+        <div class="result-container">
+            <div id="result"></div>
+        </div>
+    </div>
+</body>
+</html>
